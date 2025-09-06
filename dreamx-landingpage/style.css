@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --color-primary: #3b82f6; /* Royal Blue - Main CTAs */
+  --color-secondary: #60a5fa; /* Sky Blue - Hover & Highlights */
+  --color-accent: #06b6d4; /* Teal - Small Highlights */
+  --color-neutral: #1f2937; /* Dark Grey - Backgrounds & Text */
+  --color-light: #ffffff; /* White - Text & Card BG */
+}
+
+header {
+  display: flex;
+  /* height: 50px; */
+  background-color: var(--color-neutral);
+  color: var(--color-light);
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.logo h1{
+  font-size: 1.4rem;
+}
+.headerBtnContainer {
+  margin-left: auto;
+}
+
+.headerBtnContainer button:hover {
+  transform: scale(1.1);
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+}
+
+.headerBtn1 {
+  padding: 8px 15px;
+  width: auto;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+  font-weight: bold;
+  margin-right: 10px;
+  transition: all 0.1s ease;
+  cursor: pointer;
+  background-color: var(--color-light);
+  color: var(--color-neutral);
+}
+
+.headerBtn2 {
+  padding: 8px 15px;
+  width: auto;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  margin-right: 10px;
+  transition: all 0.1s ease;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+
+.menuIcon {
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+.menuIcon:hover {
+  transform: scale(1.1);
+}
+
+/* sidebar */
+.sideBar {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 80vh;
+  width: 30%;
+  justify-content: space-between;
+  padding: 15px;
+  backdrop-filter: blur(10px);
+  background-color: var(--color-neutral); /* Dark sidebar */
+}
+.sideBar li {
+  width: 100%;
+}
+
+.sideBar a {
+  text-decoration: none;
+  color: var(--color-light); /* White links */
+  font-size: 1.1rem;
+  transition: all 0.1s ease-in-out;
+  display: inline-block;
+}
+.sideBar a:hover {
+  transform: scale(1.1);
+  color: var(--color-primary); /* Blue hover effect */
+  transform: scale(1.1);
+}
+
+.crossIcon img {
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+.crossIcon img:hover {
+  transform: scale(1.1);
+}
+
+/* hero section code starts from here*/
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero h1 {
+  font-size: 2.25rem;
+  text-align: center;
+  max-width: 700px;
+  color: var(--color-neutral); /* Dark heading */
+}
+
+.hero p {
+  font-size: 1.1rem;
+  /* font-weight: bold; */
+  text-align: center;
+  color: var(--color-neutral); /* Darker for readability */
+}
+
+.heroBtnContainer {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.heroBtnContainer input {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+  width: auto;
+  cursor: pointer;
+  border: 1px solid var(--color-primary);
+}
+
+.heroBtnContainer button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  width: auto;
+  box-shadow: 0px 0px 5px rgba(11, 27, 11, 0.904);
+  cursor: pointer;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  transition: background-color 0.2s ease;
+}
+
+.heroBtnContainer button:hover {
+  transform: scale(1.1);
+  background-color: var(--color-secondary);
+}
+
+/* this code belongs to features */
+.features {
+  min-height: 50vh;
+  padding: 0 10px;
+  background-color: var(--color-neutral); /* Dark background */
+  color: var(--color-light);
+}
+
+.featuresBox1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  align-items: center;
+  margin-bottom: 10px;
+  /* color: #7bd389; */
+  color: white;
+}
+
+.featuresBox1 h2 {
+  font-size: 2rem;
+  color: var(--color-light);
+}
+.featuresBox1 h4 {
+  text-align: start;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  color: var(--color-accent); /* Teal for "Explore All" */
+}
+.featuresBox1 h4:hover {
+  transform: scale(1.1);
+  color: var(--color-secondary);
+}
+
+.featuresBox2 {
+  border-bottom: 0.5px solid #5555555d;
+  display: flex;
+  padding: 20px 10px;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.featuresBox2 .cards {
+  height: auto;
+  padding: 15px;
+  flex-basis: 1 1 175px;
+  max-width: 225px;
+  box-shadow: 0 0 5px;
+  font-size: 0.9rem;
+  background-color: var(--color-light); /* White cards */
+  color: var(--color-neutral);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+.featuresBox2 .cards:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cards h4 {
+  font-size: 1.2rem;
+}
+.cards p:first-child {
+  font-weight: bold;
+}
+
+.featuresBox2 .one {
+  /* background-color: #7bdcb5; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 25px;
+}
+
+.featuresBox2 .two {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 25px;
+}
+
+.featuresBox2 .three {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 25px;
+}
+
+.featuresBox2 .four {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 25px;
+}
+
+.cardsinnerbox {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.233);
+  padding-top: 10px;
+}
+
+.cardsinnerbox h4 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Using MEDIA QUERIES FROM THIS LINE */
+@media (max-width: 748px) {
+  .headerBtn1,
+  .headerBtn2 {
+    display: none;
+  }
+  .hero h1 {
+    padding: 10px;
+    font-size: 2rem;
+  }
+  .hero p {
+    padding: 10px;
+  }
+  .hero .heroBtnContainer input,
+  button {
+    padding: 10px;
+  }
+  .sideBar {
+    width: 80%;
+  }
+
+  .featuresBox1 h2 {
+    font-size: 1.75rem;
+  }
+  .featuresBox2 .cards {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 1.75rem;
+    max-width: 275px;
+  }
+  .featuresBox1 h2 {
+    font-size: 1.3rem;
+    text-align: start;
+  }
+  .featuresBox1 h4 {
+    font-size: 0.9rem;
+  }
+  .featuresBox2 .cards {
+    font-size: 0.8rem;
+  }
+}
